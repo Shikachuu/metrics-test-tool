@@ -73,7 +73,7 @@ func Lint() error {
 // Test runs the unit tests for the given codebase
 func Test() error {
 	mg.Deps(Lint)
-	return sh.RunV(mg.GoCmd(), "test", "./...")
+	return sh.RunV(mg.GoCmd(), "test", "-cover", "./...")
 }
 
 // Manage your deps, or running package managers.
