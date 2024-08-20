@@ -1,0 +1,21 @@
+run:
+  timeout: 2m
+  go: "1.22"
+  tests: true
+output:
+  formats:
+    - format: json
+      path: stdout
+    - format: github-actions
+      path: stdout
+linters:
+  enable:
+    - errname
+    - goconst
+    - goimports
+    - nonamedreturns
+    - prealloc
+    - promlinter
+    - sloglint
+    - canonicalheader
+    - cyclop
